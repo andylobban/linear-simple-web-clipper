@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linear Simple Web Clipper</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Linear Simple Web Clipper</h1>
+    <button id="btn-logout" class="btn-ghost" title="Log out">Log out</button>
+  </header>
+
+  <!-- Auth view -->
+  <div id="view-auth" class="view hidden">
+    <p class="auth-desc">Connect your Linear account to start clipping pages into issues.</p>
+    <button id="btn-connect" class="btn-primary btn-full">Connect to Linear</button>
+  </div>
+
+  <!-- Main view -->
+  <div id="view-main" class="view hidden">
+    <div class="scroll-area">
+    <div id="warning-banner" class="warning hidden">
+      Cannot clip this page — you can still enter a title manually.
+    </div>
+
+    <div class="field">
+      <label for="issue-title">Title</label>
+      <input type="text" id="issue-title" placeholder="Issue title" />
+    </div>
+
+    <div class="field">
+      <label for="content-preview">Content preview</label>
+      <textarea id="content-preview" rows="6" readonly placeholder="Page content will appear here…"></textarea>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="select-team">Team</label>
+        <select id="select-team">
+          <option value="">Loading…</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="select-project">Project</label>
+        <select id="select-project">
+          <option value="">None</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="select-status">Status</label>
+        <select id="select-status">
+          <option value="">Loading…</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="select-assignee">Assignee</label>
+        <select id="select-assignee">
+          <option value="">Unassigned</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="select-priority">Priority</label>
+        <select id="select-priority">
+          <option value="0">No priority</option>
+          <option value="1">Urgent</option>
+          <option value="2">High</option>
+          <option value="3">Medium</option>
+          <option value="4">Low</option>
+        </select>
+      </div>
+      <div class="field"></div>
+    </div>
+
+    <div class="field">
+      <label for="select-labels">Labels</label>
+      <select id="select-labels" multiple size="3">
+      </select>
+      <span class="field-hint">Hold ⌘ / Ctrl to select multiple</span>
+    </div>
+    </div><!-- end scroll-area -->
+
+    <div class="footer">
+      <button id="btn-create" class="btn-primary btn-full">Create Issue</button>
+      <div id="status" class="status hidden"></div>
+    </div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
