@@ -1,6 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Linear Simple Web Clipper",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq1JuXbTKjvJIUnquwEsoGZ2hioSdexvI/jtDLk8IutcDgjGnID9JUulsNoZWHM/4+t7hGj39CEtCvyGAlwzUevq0nw/rRVMSm0rSbJqAzZCl8WC1q3GvBfJT+b2OGB/z8sU5UWEC/NcyulIFkYv3zDDq7Mc0YTU3fpMqxHZibOSY/qGWs6ABiPd+AzErp1URA1/ZtbxRC88OlMizYPrvApjG2n8GhJVETPuO7A+E5PywlYZPYXCftPGFPxZccrj/ImEyncKXgDjN2TBka5uyFGh3RahDBRQoDYxLDEPPvmJ1tuLfTuUwbhKKQZuhcooOmBhgRWUvy5UIlPt1f4mNEQIDAQAB",
   "version": "1.0.0",
   "description": "Clip web pages into Linear issues with a single click",
   "permissions": [
